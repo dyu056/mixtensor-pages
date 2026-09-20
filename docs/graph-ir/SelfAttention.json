@@ -1,0 +1,148 @@
+{
+  "schema": "mixtensor.graph/1",
+  "name": "SelfAttention",
+  "inputs": {
+    "x": {
+      "shape": [
+        "B",
+        4,
+        4
+      ],
+      "dtype": "float32",
+      "axes": [
+        "batch",
+        "token",
+        "feature"
+      ]
+    }
+  },
+  "parameters": {
+    "wq": {
+      "shape": [
+        4,
+        4
+      ],
+      "dtype": "float32",
+      "init": "xavier_uniform",
+      "trainable": true,
+      "value": null
+    },
+    "wk": {
+      "shape": [
+        4,
+        4
+      ],
+      "dtype": "float32",
+      "init": "xavier_uniform",
+      "trainable": true,
+      "value": null
+    },
+    "wv": {
+      "shape": [
+        4,
+        4
+      ],
+      "dtype": "float32",
+      "init": "xavier_uniform",
+      "trainable": true,
+      "value": null
+    },
+    "scale": {
+      "shape": [],
+      "dtype": "float32",
+      "init": "constant",
+      "trainable": false,
+      "value": 0.5
+    }
+  },
+  "nodes": [
+    {
+      "id": "q",
+      "op": "PROJECT",
+      "inputs": {
+        "x": "x",
+        "weight": "wq"
+      },
+      "attrs": {},
+      "outputs": {}
+    },
+    {
+      "id": "k",
+      "op": "PROJECT",
+      "inputs": {
+        "x": "x",
+        "weight": "wk"
+      },
+      "attrs": {},
+      "outputs": {}
+    },
+    {
+      "id": "v",
+      "op": "PROJECT",
+      "inputs": {
+        "x": "x",
+        "weight": "wv"
+      },
+      "attrs": {},
+      "outputs": {}
+    },
+    {
+      "id": "scores",
+      "op": "COMPARE",
+      "inputs": {
+        "q": "q",
+        "k": "k"
+      },
+      "attrs": {},
+      "outputs": {}
+    },
+    {
+      "id": "scales",
+      "op": "BROADCAST",
+      "inputs": {
+        "x": "scale"
+      },
+      "attrs": {
+        "shape": [
+          "B",
+          4,
+          4
+        ]
+      },
+      "outputs": {}
+    },
+    {
+      "id": "scaled",
+      "op": "MUL",
+      "inputs": {
+        "x": "scores",
+        "other": "scales"
+      },
+      "attrs": {},
+      "outputs": {}
+    },
+    {
+      "id": "weights",
+      "op": "NORMALIZE",
+      "inputs": {
+        "scores": "scaled"
+      },
+      "attrs": {},
+      "outputs": {}
+    },
+    {
+      "id": "context",
+      "op": "MIX",
+      "inputs": {
+        "x": "v",
+        "weights": "weights"
+      },
+      "attrs": {},
+      "outputs": {}
+    }
+  ],
+  "outputs": {
+    "y": "context"
+  },
+  "metadata": {}
+}

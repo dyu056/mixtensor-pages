@@ -1,0 +1,117 @@
+{
+  "schema": "mixtensor.graph/1",
+  "name": "SequenceScan",
+  "inputs": {
+    "x": {
+      "shape": [
+        5,
+        "B",
+        4
+      ],
+      "dtype": "float32",
+      "axes": []
+    },
+    "initial": {
+      "shape": [
+        "B",
+        4
+      ],
+      "dtype": "float32",
+      "axes": []
+    }
+  },
+  "parameters": {
+    "w": {
+      "shape": [
+        4,
+        4
+      ],
+      "dtype": "float32",
+      "init": "xavier_uniform",
+      "trainable": true,
+      "value": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "scan",
+      "op": "SCAN",
+      "inputs": {
+        "xs": "x",
+        "carry": "initial",
+        "w": "w"
+      },
+      "attrs": {
+        "domain": {
+          "kind": "sequence",
+          "axis": 0,
+          "out_dim": 0
+        }
+      },
+      "outputs": {},
+      "body": {
+        "schema": "mixtensor.graph/1",
+        "name": "SequenceBody",
+        "inputs": {
+          "fragment": {
+            "shape": [
+              "B",
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          },
+          "carry": {
+            "shape": [
+              "B",
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          },
+          "w": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        "parameters": {},
+        "nodes": [
+          {
+            "id": "project",
+            "op": "PROJECT",
+            "inputs": {
+              "x": "fragment",
+              "weight": "w"
+            },
+            "attrs": {},
+            "outputs": {}
+          },
+          {
+            "id": "accumulate",
+            "op": "ADD",
+            "inputs": {
+              "x": "project",
+              "other": "carry"
+            },
+            "attrs": {},
+            "outputs": {}
+          }
+        ],
+        "outputs": {
+          "y": "accumulate",
+          "carry": "accumulate"
+        },
+        "metadata": {}
+      }
+    }
+  ],
+  "outputs": {
+    "y": "scan:ys",
+    "final": "scan:carry"
+  },
+  "metadata": {}
+}

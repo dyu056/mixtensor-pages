@@ -1,0 +1,1135 @@
+{
+  "schema": "mixtensor.graph-matrices/1",
+  "definition_hash": "0efaec8dd3be06a49b89e6da0b488cc92713114d858c77f1b4f43988be4e20c3",
+  "feature_columns": [
+    "INPUT",
+    "PARAMETER",
+    "OUTPUT",
+    "PROJECT",
+    "MIX",
+    "COMPARE",
+    "ROUTE",
+    "NORMALIZE",
+    "AGGREGATE",
+    "SHIFT",
+    "PERMUTE",
+    "RESHAPE",
+    "REDUCE",
+    "BROADCAST",
+    "ADD",
+    "MUL",
+    "GATE",
+    "CONCAT",
+    "NONLINEAR",
+    "NORM",
+    "REPEAT",
+    "SCAN"
+  ],
+  "adjacency_convention": "A[source][target] = number of tensor-reference edges; ports are in edges",
+  "scopes": {
+    "root": {
+      "node_ids": [
+        "x",
+        "wq",
+        "wk",
+        "wv",
+        "scale",
+        "q",
+        "k",
+        "v",
+        "scales",
+        "scores",
+        "scaled",
+        "weights",
+        "context",
+        "output:y"
+      ],
+      "node_types": [
+        "INPUT",
+        "PARAMETER",
+        "PARAMETER",
+        "PARAMETER",
+        "PARAMETER",
+        "PROJECT",
+        "PROJECT",
+        "PROJECT",
+        "BROADCAST",
+        "COMPARE",
+        "MUL",
+        "NORMALIZE",
+        "MIX",
+        "OUTPUT"
+      ],
+      "adjacency": [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "node_features": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "stored_depth": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "edges": [
+        {
+          "source": "x",
+          "source_port": "out",
+          "target": "q",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": [
+              "batch",
+              "token",
+              "feature"
+            ]
+          }
+        },
+        {
+          "source": "wq",
+          "source_port": "out",
+          "target": "q",
+          "target_port": "weight",
+          "item": null,
+          "tensor": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "x",
+          "source_port": "out",
+          "target": "k",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": [
+              "batch",
+              "token",
+              "feature"
+            ]
+          }
+        },
+        {
+          "source": "wk",
+          "source_port": "out",
+          "target": "k",
+          "target_port": "weight",
+          "item": null,
+          "tensor": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "x",
+          "source_port": "out",
+          "target": "v",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": [
+              "batch",
+              "token",
+              "feature"
+            ]
+          }
+        },
+        {
+          "source": "wv",
+          "source_port": "out",
+          "target": "v",
+          "target_port": "weight",
+          "item": null,
+          "tensor": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "scale",
+          "source_port": "out",
+          "target": "scales",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "q",
+          "source_port": "out",
+          "target": "scores",
+          "target_port": "q",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "k",
+          "source_port": "out",
+          "target": "scores",
+          "target_port": "k",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "scores",
+          "source_port": "out",
+          "target": "scaled",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "scales",
+          "source_port": "out",
+          "target": "scaled",
+          "target_port": "other",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "scaled",
+          "source_port": "out",
+          "target": "weights",
+          "target_port": "scores",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "v",
+          "source_port": "out",
+          "target": "context",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "weights",
+          "source_port": "out",
+          "target": "context",
+          "target_port": "weights",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "context",
+          "source_port": "out",
+          "target": "output:y",
+          "target_port": "y",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "q",
+          "op": "PROJECT",
+          "inputs": {
+            "x": "x",
+            "weight": "wq"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "k",
+          "op": "PROJECT",
+          "inputs": {
+            "x": "x",
+            "weight": "wk"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "v",
+          "op": "PROJECT",
+          "inputs": {
+            "x": "x",
+            "weight": "wv"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "scales",
+          "op": "BROADCAST",
+          "inputs": {
+            "x": "scale"
+          },
+          "attrs": {
+            "shape": [
+              "B",
+              4,
+              4
+            ]
+          },
+          "outputs": {}
+        },
+        {
+          "id": "scores",
+          "op": "COMPARE",
+          "inputs": {
+            "q": "q",
+            "k": "k"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "scaled",
+          "op": "MUL",
+          "inputs": {
+            "x": "scores",
+            "other": "scales"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "weights",
+          "op": "NORMALIZE",
+          "inputs": {
+            "scores": "scaled"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "context",
+          "op": "MIX",
+          "inputs": {
+            "x": "v",
+            "weights": "weights"
+          },
+          "attrs": {},
+          "outputs": {}
+        }
+      ],
+      "parameters": {
+        "wq": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "init": "xavier_uniform",
+          "trainable": true,
+          "value": null
+        },
+        "wk": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "init": "xavier_uniform",
+          "trainable": true,
+          "value": null
+        },
+        "wv": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "init": "xavier_uniform",
+          "trainable": true,
+          "value": null
+        },
+        "scale": {
+          "shape": [],
+          "dtype": "float32",
+          "init": "constant",
+          "trainable": false,
+          "value": 0.5
+        }
+      },
+      "tensor_specs": {
+        "x:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": [
+            "batch",
+            "token",
+            "feature"
+          ]
+        },
+        "wq:out": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "wk:out": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "wv:out": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "scale:out": {
+          "shape": [],
+          "dtype": "float32",
+          "axes": []
+        },
+        "q:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "k:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "v:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "scales:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "scores:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "scaled:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "weights:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "context:out": {
+          "shape": [
+            2,
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        }
+      },
+      "warnings": []
+    }
+  },
+  "hierarchy": []
+}

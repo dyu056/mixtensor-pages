@@ -1,0 +1,106 @@
+{
+  "schema": "mixtensor.graph/1",
+  "name": "SharedRepeat",
+  "inputs": {
+    "x": {
+      "shape": [
+        "B",
+        4
+      ],
+      "dtype": "float32",
+      "axes": []
+    }
+  },
+  "parameters": {
+    "w": {
+      "shape": [
+        4,
+        4
+      ],
+      "dtype": "float32",
+      "init": "xavier_uniform",
+      "trainable": true,
+      "value": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "loop",
+      "op": "REPEAT",
+      "inputs": {
+        "state": "x",
+        "w": "w"
+      },
+      "attrs": {
+        "steps": 3,
+        "max_steps": 8,
+        "binding": "shared"
+      },
+      "outputs": {},
+      "body": {
+        "schema": "mixtensor.graph/1",
+        "name": "ResidualBody",
+        "inputs": {
+          "state": {
+            "shape": [
+              "B",
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          },
+          "w": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        "parameters": {},
+        "nodes": [
+          {
+            "id": "project",
+            "op": "PROJECT",
+            "inputs": {
+              "x": "state",
+              "weight": "w"
+            },
+            "attrs": {},
+            "outputs": {}
+          },
+          {
+            "id": "activate",
+            "op": "NONLINEAR",
+            "inputs": {
+              "x": "project"
+            },
+            "attrs": {
+              "activation": "tanh"
+            },
+            "outputs": {}
+          },
+          {
+            "id": "residual",
+            "op": "ADD",
+            "inputs": {
+              "x": "state",
+              "other": "activate"
+            },
+            "attrs": {},
+            "outputs": {}
+          }
+        ],
+        "outputs": {
+          "state": "residual"
+        },
+        "metadata": {}
+      }
+    }
+  ],
+  "outputs": {
+    "y": "loop:state"
+  },
+  "metadata": {}
+}

@@ -1,0 +1,500 @@
+{
+  "schema": "mixtensor.graph-matrices/1",
+  "definition_hash": "9c3a44c2e0634e73d425259af9e77e138f88bf1c5cbb5929dd7619838386b559",
+  "feature_columns": [
+    "INPUT",
+    "PARAMETER",
+    "OUTPUT",
+    "PROJECT",
+    "MIX",
+    "COMPARE",
+    "ROUTE",
+    "NORMALIZE",
+    "AGGREGATE",
+    "SHIFT",
+    "PERMUTE",
+    "RESHAPE",
+    "REDUCE",
+    "BROADCAST",
+    "ADD",
+    "MUL",
+    "GATE",
+    "CONCAT",
+    "NONLINEAR",
+    "NORM",
+    "REPEAT",
+    "SCAN"
+  ],
+  "adjacency_convention": "A[source][target] = number of tensor-reference edges; ports are in edges",
+  "scopes": {
+    "root": {
+      "node_ids": [
+        "x",
+        "w1",
+        "w2",
+        "hidden",
+        "activation",
+        "prediction",
+        "output:y"
+      ],
+      "node_types": [
+        "INPUT",
+        "PARAMETER",
+        "PARAMETER",
+        "PROJECT",
+        "NONLINEAR",
+        "PROJECT",
+        "OUTPUT"
+      ],
+      "adjacency": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "node_features": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "stored_depth": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "edges": [
+        {
+          "source": "x",
+          "source_port": "out",
+          "target": "hidden",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": [
+              "batch",
+              "feature"
+            ]
+          }
+        },
+        {
+          "source": "w1",
+          "source_port": "out",
+          "target": "hidden",
+          "target_port": "weight",
+          "item": null,
+          "tensor": {
+            "shape": [
+              4,
+              8
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "hidden",
+          "source_port": "out",
+          "target": "activation",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              8
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "activation",
+          "source_port": "out",
+          "target": "prediction",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              8
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "w2",
+          "source_port": "out",
+          "target": "prediction",
+          "target_port": "weight",
+          "item": null,
+          "tensor": {
+            "shape": [
+              8,
+              2
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "prediction",
+          "source_port": "out",
+          "target": "output:y",
+          "target_port": "y",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              2
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "hidden",
+          "op": "PROJECT",
+          "inputs": {
+            "x": "x",
+            "weight": "w1"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "activation",
+          "op": "NONLINEAR",
+          "inputs": {
+            "x": "hidden"
+          },
+          "attrs": {
+            "activation": "relu"
+          },
+          "outputs": {}
+        },
+        {
+          "id": "prediction",
+          "op": "PROJECT",
+          "inputs": {
+            "x": "activation",
+            "weight": "w2"
+          },
+          "attrs": {},
+          "outputs": {}
+        }
+      ],
+      "parameters": {
+        "w1": {
+          "shape": [
+            4,
+            8
+          ],
+          "dtype": "float32",
+          "init": "xavier_uniform",
+          "trainable": true,
+          "value": null
+        },
+        "w2": {
+          "shape": [
+            8,
+            2
+          ],
+          "dtype": "float32",
+          "init": "xavier_uniform",
+          "trainable": true,
+          "value": null
+        }
+      },
+      "tensor_specs": {
+        "x:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": [
+            "batch",
+            "feature"
+          ]
+        },
+        "w1:out": {
+          "shape": [
+            4,
+            8
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "w2:out": {
+          "shape": [
+            8,
+            2
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "hidden:out": {
+          "shape": [
+            2,
+            8
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "activation:out": {
+          "shape": [
+            2,
+            8
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "prediction:out": {
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "float32",
+          "axes": []
+        }
+      },
+      "warnings": []
+    }
+  },
+  "hierarchy": []
+}

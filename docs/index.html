@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Code Module Definition — Matrix DSL</title>
+  <meta name="description" content="浏览公开 nn.Module 的 DSL 定义：ParameterDefinition、原语 forward 与 LOOP 子图。">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="module-data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">▦</span><span>MATRIX<span class="brand-sub">MODEL LANGUAGE LAB</span></span></a>
+    <nav aria-label="主导航"><a href="index.html" aria-current="page">Module Definition</a><a href="primitives.html">原语图谱</a><a href="models.html">模型拆解</a></nav>
+    <span class="version" id="version">DSL / v0.2</span>
+  </header>
+  <main>
+    <div class="page-heading"><div><p class="eyebrow">SOURCE EXPLORER / PYTORCH → MATRIX DSL</p><h1>Code Module Definition<span class="title-dot">.</span></h1><p class="subtitle">从参数定义到原语网络，逐行检查一个模型。</p></div><a class="report-link" href="nn-loop-recap.md">覆盖报告 <span aria-hidden="true">↗</span></a></div>
+    <div class="summary" id="summary" aria-label="覆盖概览"></div>
+    <div class="workspace">
+      <aside class="module-sidebar" aria-label="模块目录">
+        <div class="library-heading"><span>MODULE LIBRARY</span><span id="result-count"></span></div>
+        <label class="search"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="搜索模块或原语…" aria-label="搜索模块或原语" autocomplete="off"><kbd>/</kbd></label>
+        <label class="filter-label"><span>显示范围</span><select id="status-filter" aria-label="按实现状态筛选"><option value="all">所有定义</option><option value="expanded">已转写</option><option value="stateless">训练无状态</option><option value="unsupported">未实现</option><option value="structural">结构 / 抽象类</option></select></label>
+        <div id="module-list" class="module-list" role="list" aria-label="模块文件"></div>
+        <div class="sidebar-foot"><span class="dot verified"></span>源码来自当前展开文件</div>
+      </aside>
+      <section class="module-main" aria-label="模块定义内容">
+        <div id="module-heading"></div>
+        <div class="code-layout">
+          <div class="editor">
+            <div class="editor-toolbar"><div role="tablist" aria-label="代码视图"><button role="tab" data-view="forward" id="tab-forward">Forward</button><button role="tab" data-view="definition" id="tab-definition">ParameterDefinition</button><button role="tab" data-view="source" id="tab-source">完整文件</button></div><button id="copy" class="copy-button" aria-label="复制当前代码">复制代码</button></div>
+            <div class="editor-path" id="editor-path"></div>
+            <div class="code-scroll" tabindex="0" aria-label="可滚动源代码"><pre id="code" role="tabpanel"><code></code></pre></div>
+            <div class="editor-footer"><span id="code-meta"></span><span>Python · UTF-8</span></div>
+          </div>
+          <aside class="definition-inspector" id="inspector" aria-label="定义信息"></aside>
+        </div>
+      </section>
+    </div>
+    <p class="scope-note">验证针对列出的输入形状与配置。未实现项不计入覆盖率；训练无状态计算不代表完整训练语义。</p>
+  </main>
+  <footer><span>MATRIX / CODE MODULE DEFINITION</span><span>ParameterDefinition → Primitive network → Forward</span></footer>
+  <div id="notification" role="status" aria-live="polite"></div>
+</body>
+</html>

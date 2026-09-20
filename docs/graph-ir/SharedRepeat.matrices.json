@@ -1,0 +1,747 @@
+{
+  "schema": "mixtensor.graph-matrices/1",
+  "definition_hash": "f99d31e8348b44da7aa8c8f4b6750248c9c8efd09196103343604847b9f5bc88",
+  "feature_columns": [
+    "INPUT",
+    "PARAMETER",
+    "OUTPUT",
+    "PROJECT",
+    "MIX",
+    "COMPARE",
+    "ROUTE",
+    "NORMALIZE",
+    "AGGREGATE",
+    "SHIFT",
+    "PERMUTE",
+    "RESHAPE",
+    "REDUCE",
+    "BROADCAST",
+    "ADD",
+    "MUL",
+    "GATE",
+    "CONCAT",
+    "NONLINEAR",
+    "NORM",
+    "REPEAT",
+    "SCAN"
+  ],
+  "adjacency_convention": "A[source][target] = number of tensor-reference edges; ports are in edges",
+  "scopes": {
+    "root/loop": {
+      "node_ids": [
+        "state",
+        "w",
+        "project",
+        "activate",
+        "residual",
+        "output:state"
+      ],
+      "node_types": [
+        "INPUT",
+        "INPUT",
+        "PROJECT",
+        "NONLINEAR",
+        "ADD",
+        "OUTPUT"
+      ],
+      "adjacency": [
+        [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "node_features": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "stored_depth": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "edges": [
+        {
+          "source": "state",
+          "source_port": "out",
+          "target": "project",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "w",
+          "source_port": "out",
+          "target": "project",
+          "target_port": "weight",
+          "item": null,
+          "tensor": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "project",
+          "source_port": "out",
+          "target": "activate",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "state",
+          "source_port": "out",
+          "target": "residual",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "activate",
+          "source_port": "out",
+          "target": "residual",
+          "target_port": "other",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "residual",
+          "source_port": "out",
+          "target": "output:state",
+          "target_port": "state",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "project",
+          "op": "PROJECT",
+          "inputs": {
+            "x": "state",
+            "weight": "w"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "activate",
+          "op": "NONLINEAR",
+          "inputs": {
+            "x": "project"
+          },
+          "attrs": {
+            "activation": "tanh"
+          },
+          "outputs": {}
+        },
+        {
+          "id": "residual",
+          "op": "ADD",
+          "inputs": {
+            "x": "state",
+            "other": "activate"
+          },
+          "attrs": {},
+          "outputs": {}
+        }
+      ],
+      "parameters": {},
+      "tensor_specs": {
+        "state:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "w:out": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "project:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "activate:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "residual:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        }
+      },
+      "warnings": []
+    },
+    "root": {
+      "node_ids": [
+        "x",
+        "w",
+        "loop",
+        "output:y"
+      ],
+      "node_types": [
+        "INPUT",
+        "PARAMETER",
+        "REPEAT",
+        "OUTPUT"
+      ],
+      "adjacency": [
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "node_features": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "stored_depth": [
+        0,
+        0,
+        1,
+        2
+      ],
+      "edges": [
+        {
+          "source": "x",
+          "source_port": "out",
+          "target": "loop",
+          "target_port": "state",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "w",
+          "source_port": "out",
+          "target": "loop",
+          "target_port": "w",
+          "item": null,
+          "tensor": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "loop",
+          "source_port": "state",
+          "target": "output:y",
+          "target_port": "y",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "loop",
+          "op": "REPEAT",
+          "inputs": {
+            "state": "x",
+            "w": "w"
+          },
+          "attrs": {
+            "steps": 3,
+            "max_steps": 8,
+            "binding": "shared"
+          },
+          "outputs": {},
+          "body": {
+            "schema": "mixtensor.graph/1",
+            "name": "ResidualBody",
+            "inputs": {
+              "state": {
+                "shape": [
+                  "B",
+                  4
+                ],
+                "dtype": "float32",
+                "axes": []
+              },
+              "w": {
+                "shape": [
+                  4,
+                  4
+                ],
+                "dtype": "float32",
+                "axes": []
+              }
+            },
+            "parameters": {},
+            "nodes": [
+              {
+                "id": "project",
+                "op": "PROJECT",
+                "inputs": {
+                  "x": "state",
+                  "weight": "w"
+                },
+                "attrs": {},
+                "outputs": {}
+              },
+              {
+                "id": "activate",
+                "op": "NONLINEAR",
+                "inputs": {
+                  "x": "project"
+                },
+                "attrs": {
+                  "activation": "tanh"
+                },
+                "outputs": {}
+              },
+              {
+                "id": "residual",
+                "op": "ADD",
+                "inputs": {
+                  "x": "state",
+                  "other": "activate"
+                },
+                "attrs": {},
+                "outputs": {}
+              }
+            ],
+            "outputs": {
+              "state": "residual"
+            },
+            "metadata": {}
+          }
+        }
+      ],
+      "parameters": {
+        "w": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "init": "xavier_uniform",
+          "trainable": true,
+          "value": null
+        }
+      },
+      "tensor_specs": {
+        "x:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "w:out": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "loop:state": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        }
+      },
+      "warnings": []
+    }
+  },
+  "hierarchy": [
+    {
+      "parent_scope": "root",
+      "control_node": "loop",
+      "body_scope": "root/loop",
+      "bindings": {
+        "state": "x",
+        "w": "w"
+      },
+      "attrs": {
+        "steps": 3,
+        "max_steps": 8,
+        "binding": "shared"
+      },
+      "interface": {
+        "state": "state"
+      }
+    }
+  ]
+}

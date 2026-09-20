@@ -1,0 +1,911 @@
+{
+  "schema": "mixtensor.graph-matrices/1",
+  "definition_hash": "e2c2ff80aab45e908bece28d906121b92708c310c3272973785199941c41a65b",
+  "feature_columns": [
+    "INPUT",
+    "PARAMETER",
+    "OUTPUT",
+    "PROJECT",
+    "MIX",
+    "COMPARE",
+    "ROUTE",
+    "NORMALIZE",
+    "AGGREGATE",
+    "SHIFT",
+    "PERMUTE",
+    "RESHAPE",
+    "REDUCE",
+    "BROADCAST",
+    "ADD",
+    "MUL",
+    "GATE",
+    "CONCAT",
+    "NONLINEAR",
+    "NORM",
+    "REPEAT",
+    "SCAN"
+  ],
+  "adjacency_convention": "A[source][target] = number of tensor-reference edges; ports are in edges",
+  "scopes": {
+    "root/scan": {
+      "node_ids": [
+        "fragment",
+        "carry",
+        "w",
+        "project",
+        "accumulate",
+        "output:y",
+        "output:carry"
+      ],
+      "node_types": [
+        "INPUT",
+        "INPUT",
+        "INPUT",
+        "PROJECT",
+        "ADD",
+        "OUTPUT",
+        "OUTPUT"
+      ],
+      "adjacency": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "node_features": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "stored_depth": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        3
+      ],
+      "edges": [
+        {
+          "source": "fragment",
+          "source_port": "out",
+          "target": "project",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "w",
+          "source_port": "out",
+          "target": "project",
+          "target_port": "weight",
+          "item": null,
+          "tensor": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "project",
+          "source_port": "out",
+          "target": "accumulate",
+          "target_port": "x",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "carry",
+          "source_port": "out",
+          "target": "accumulate",
+          "target_port": "other",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "accumulate",
+          "source_port": "out",
+          "target": "output:y",
+          "target_port": "y",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "accumulate",
+          "source_port": "out",
+          "target": "output:carry",
+          "target_port": "carry",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "project",
+          "op": "PROJECT",
+          "inputs": {
+            "x": "fragment",
+            "weight": "w"
+          },
+          "attrs": {},
+          "outputs": {}
+        },
+        {
+          "id": "accumulate",
+          "op": "ADD",
+          "inputs": {
+            "x": "project",
+            "other": "carry"
+          },
+          "attrs": {},
+          "outputs": {}
+        }
+      ],
+      "parameters": {},
+      "tensor_specs": {
+        "fragment:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "carry:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "w:out": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "project:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "accumulate:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        }
+      },
+      "warnings": []
+    },
+    "root": {
+      "node_ids": [
+        "x",
+        "initial",
+        "w",
+        "scan",
+        "output:y",
+        "output:final"
+      ],
+      "node_types": [
+        "INPUT",
+        "INPUT",
+        "PARAMETER",
+        "SCAN",
+        "OUTPUT",
+        "OUTPUT"
+      ],
+      "adjacency": [
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "node_features": [
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "stored_depth": [
+        0,
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "edges": [
+        {
+          "source": "x",
+          "source_port": "out",
+          "target": "scan",
+          "target_port": "xs",
+          "item": null,
+          "tensor": {
+            "shape": [
+              5,
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "initial",
+          "source_port": "out",
+          "target": "scan",
+          "target_port": "carry",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "w",
+          "source_port": "out",
+          "target": "scan",
+          "target_port": "w",
+          "item": null,
+          "tensor": {
+            "shape": [
+              4,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "scan",
+          "source_port": "ys",
+          "target": "output:y",
+          "target_port": "y",
+          "item": null,
+          "tensor": {
+            "shape": [
+              5,
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        {
+          "source": "scan",
+          "source_port": "carry",
+          "target": "output:final",
+          "target_port": "final",
+          "item": null,
+          "tensor": {
+            "shape": [
+              2,
+              4
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        }
+      ],
+      "nodes": [
+        {
+          "id": "scan",
+          "op": "SCAN",
+          "inputs": {
+            "xs": "x",
+            "carry": "initial",
+            "w": "w"
+          },
+          "attrs": {
+            "domain": {
+              "kind": "sequence",
+              "axis": 0,
+              "out_dim": 0
+            }
+          },
+          "outputs": {},
+          "body": {
+            "schema": "mixtensor.graph/1",
+            "name": "SequenceBody",
+            "inputs": {
+              "fragment": {
+                "shape": [
+                  "B",
+                  4
+                ],
+                "dtype": "float32",
+                "axes": []
+              },
+              "carry": {
+                "shape": [
+                  "B",
+                  4
+                ],
+                "dtype": "float32",
+                "axes": []
+              },
+              "w": {
+                "shape": [
+                  4,
+                  4
+                ],
+                "dtype": "float32",
+                "axes": []
+              }
+            },
+            "parameters": {},
+            "nodes": [
+              {
+                "id": "project",
+                "op": "PROJECT",
+                "inputs": {
+                  "x": "fragment",
+                  "weight": "w"
+                },
+                "attrs": {},
+                "outputs": {}
+              },
+              {
+                "id": "accumulate",
+                "op": "ADD",
+                "inputs": {
+                  "x": "project",
+                  "other": "carry"
+                },
+                "attrs": {},
+                "outputs": {}
+              }
+            ],
+            "outputs": {
+              "y": "accumulate",
+              "carry": "accumulate"
+            },
+            "metadata": {}
+          }
+        }
+      ],
+      "parameters": {
+        "w": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "init": "xavier_uniform",
+          "trainable": true,
+          "value": null
+        }
+      },
+      "tensor_specs": {
+        "x:out": {
+          "shape": [
+            5,
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "initial:out": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "w:out": {
+          "shape": [
+            4,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "scan:ys": {
+          "shape": [
+            5,
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        },
+        "scan:carry": {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "float32",
+          "axes": []
+        }
+      },
+      "warnings": []
+    }
+  },
+  "hierarchy": [
+    {
+      "parent_scope": "root",
+      "control_node": "scan",
+      "body_scope": "root/scan",
+      "bindings": {
+        "xs": "x",
+        "carry": "initial",
+        "w": "w"
+      },
+      "attrs": {
+        "domain": {
+          "kind": "sequence",
+          "axis": 0,
+          "out_dim": 0
+        }
+      },
+      "interface": {
+        "xs": "fragment",
+        "carry": "carry"
+      }
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "mixtensor.graph/1",
+  "name": "WindowCNN",
+  "inputs": {
+    "x": {
+      "shape": [
+        "B",
+        2,
+        5,
+        5
+      ],
+      "dtype": "float32",
+      "axes": []
+    }
+  },
+  "parameters": {
+    "w": {
+      "shape": [
+        18,
+        3
+      ],
+      "dtype": "float32",
+      "init": "xavier_uniform",
+      "trainable": true,
+      "value": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "scan",
+      "op": "SCAN",
+      "inputs": {
+        "xs": "x",
+        "w": "w"
+      },
+      "attrs": {
+        "domain": {
+          "kind": "window",
+          "axes": [
+            2,
+            3
+          ],
+          "size": [
+            3,
+            3
+          ],
+          "padding": "same",
+          "output_axis": -1
+        }
+      },
+      "outputs": {},
+      "body": {
+        "schema": "mixtensor.graph/1",
+        "name": "WindowBody",
+        "inputs": {
+          "fragment": {
+            "shape": [
+              "B",
+              2,
+              3,
+              3
+            ],
+            "dtype": "float32",
+            "axes": []
+          },
+          "w": {
+            "shape": [
+              18,
+              3
+            ],
+            "dtype": "float32",
+            "axes": []
+          }
+        },
+        "parameters": {},
+        "nodes": [
+          {
+            "id": "flatten",
+            "op": "RESHAPE",
+            "inputs": {
+              "x": "fragment"
+            },
+            "attrs": {
+              "shape": [
+                "B",
+                18
+              ]
+            },
+            "outputs": {}
+          },
+          {
+            "id": "project",
+            "op": "PROJECT",
+            "inputs": {
+              "x": "flatten",
+              "weight": "w"
+            },
+            "attrs": {},
+            "outputs": {}
+          }
+        ],
+        "outputs": {
+          "y": "project"
+        },
+        "metadata": {}
+      }
+    }
+  ],
+  "outputs": {
+    "y": "scan:ys"
+  },
+  "metadata": {}
+}

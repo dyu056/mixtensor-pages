@@ -1,0 +1,76 @@
+{
+  "schema": "mixtensor.graph/1",
+  "name": "MLP",
+  "inputs": {
+    "x": {
+      "shape": [
+        "B",
+        4
+      ],
+      "dtype": "float32",
+      "axes": [
+        "batch",
+        "feature"
+      ]
+    }
+  },
+  "parameters": {
+    "w1": {
+      "shape": [
+        4,
+        8
+      ],
+      "dtype": "float32",
+      "init": "xavier_uniform",
+      "trainable": true,
+      "value": null
+    },
+    "w2": {
+      "shape": [
+        8,
+        2
+      ],
+      "dtype": "float32",
+      "init": "xavier_uniform",
+      "trainable": true,
+      "value": null
+    }
+  },
+  "nodes": [
+    {
+      "id": "hidden",
+      "op": "PROJECT",
+      "inputs": {
+        "x": "x",
+        "weight": "w1"
+      },
+      "attrs": {},
+      "outputs": {}
+    },
+    {
+      "id": "activation",
+      "op": "NONLINEAR",
+      "inputs": {
+        "x": "hidden"
+      },
+      "attrs": {
+        "activation": "relu"
+      },
+      "outputs": {}
+    },
+    {
+      "id": "prediction",
+      "op": "PROJECT",
+      "inputs": {
+        "x": "activation",
+        "weight": "w2"
+      },
+      "attrs": {},
+      "outputs": {}
+    }
+  ],
+  "outputs": {
+    "y": "prediction"
+  },
+  "metadata": {}
+}

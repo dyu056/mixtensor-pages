@@ -1,0 +1,222 @@
+{
+  "MLP": {
+    "primitive_counts": {
+      "PROJECT": 2,
+      "NONLINEAR": 1
+    },
+    "positions": [
+      {
+        "scope": "root",
+        "node": "hidden",
+        "op": "PROJECT",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root",
+        "node": "activation",
+        "op": "NONLINEAR",
+        "stored_depth": 2
+      },
+      {
+        "scope": "root",
+        "node": "prediction",
+        "op": "PROJECT",
+        "stored_depth": 3
+      }
+    ],
+    "trainable_parameters": 48,
+    "note": "Static call counts, not loop-unrolled calls. No success/performance claims."
+  },
+  "Self-attention": {
+    "primitive_counts": {
+      "PROJECT": 3,
+      "BROADCAST": 1,
+      "COMPARE": 1,
+      "MUL": 1,
+      "NORMALIZE": 1,
+      "MIX": 1
+    },
+    "positions": [
+      {
+        "scope": "root",
+        "node": "q",
+        "op": "PROJECT",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root",
+        "node": "k",
+        "op": "PROJECT",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root",
+        "node": "v",
+        "op": "PROJECT",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root",
+        "node": "scales",
+        "op": "BROADCAST",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root",
+        "node": "scores",
+        "op": "COMPARE",
+        "stored_depth": 2
+      },
+      {
+        "scope": "root",
+        "node": "scaled",
+        "op": "MUL",
+        "stored_depth": 3
+      },
+      {
+        "scope": "root",
+        "node": "weights",
+        "op": "NORMALIZE",
+        "stored_depth": 4
+      },
+      {
+        "scope": "root",
+        "node": "context",
+        "op": "MIX",
+        "stored_depth": 5
+      }
+    ],
+    "trainable_parameters": 48,
+    "note": "Static call counts, not loop-unrolled calls. No success/performance claims."
+  },
+  "Shared REPEAT": {
+    "primitive_counts": {
+      "PROJECT": 1,
+      "NONLINEAR": 1,
+      "ADD": 1,
+      "REPEAT": 1
+    },
+    "positions": [
+      {
+        "scope": "root/loop",
+        "node": "project",
+        "op": "PROJECT",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root/loop",
+        "node": "activate",
+        "op": "NONLINEAR",
+        "stored_depth": 2
+      },
+      {
+        "scope": "root/loop",
+        "node": "residual",
+        "op": "ADD",
+        "stored_depth": 3
+      },
+      {
+        "scope": "root",
+        "node": "loop",
+        "op": "REPEAT",
+        "stored_depth": 1
+      }
+    ],
+    "trainable_parameters": 16,
+    "note": "Static call counts, not loop-unrolled calls. No success/performance claims."
+  },
+  "Per-step REPEAT": {
+    "primitive_counts": {
+      "PROJECT": 1,
+      "NONLINEAR": 1,
+      "ADD": 1,
+      "REPEAT": 1
+    },
+    "positions": [
+      {
+        "scope": "root/loop",
+        "node": "project",
+        "op": "PROJECT",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root/loop",
+        "node": "activate",
+        "op": "NONLINEAR",
+        "stored_depth": 2
+      },
+      {
+        "scope": "root/loop",
+        "node": "residual",
+        "op": "ADD",
+        "stored_depth": 3
+      },
+      {
+        "scope": "root",
+        "node": "loop",
+        "op": "REPEAT",
+        "stored_depth": 1
+      }
+    ],
+    "trainable_parameters": 48,
+    "note": "Static call counts, not loop-unrolled calls. No success/performance claims."
+  },
+  "Sequence SCAN": {
+    "primitive_counts": {
+      "PROJECT": 1,
+      "ADD": 1,
+      "SCAN": 1
+    },
+    "positions": [
+      {
+        "scope": "root/scan",
+        "node": "project",
+        "op": "PROJECT",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root/scan",
+        "node": "accumulate",
+        "op": "ADD",
+        "stored_depth": 2
+      },
+      {
+        "scope": "root",
+        "node": "scan",
+        "op": "SCAN",
+        "stored_depth": 1
+      }
+    ],
+    "trainable_parameters": 16,
+    "note": "Static call counts, not loop-unrolled calls. No success/performance claims."
+  },
+  "Window SCAN / CNN": {
+    "primitive_counts": {
+      "RESHAPE": 1,
+      "PROJECT": 1,
+      "SCAN": 1
+    },
+    "positions": [
+      {
+        "scope": "root/scan",
+        "node": "flatten",
+        "op": "RESHAPE",
+        "stored_depth": 1
+      },
+      {
+        "scope": "root/scan",
+        "node": "project",
+        "op": "PROJECT",
+        "stored_depth": 2
+      },
+      {
+        "scope": "root",
+        "node": "scan",
+        "op": "SCAN",
+        "stored_depth": 1
+      }
+    ],
+    "trainable_parameters": 54,
+    "note": "Static call counts, not loop-unrolled calls. No success/performance claims."
+  }
+}
