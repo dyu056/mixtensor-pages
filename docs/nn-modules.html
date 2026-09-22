@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>nn.Module 原语平替 — mixtensor</title><meta name="description" content="逐项查看当前 torch.nn 公开模块的原语平替、验证配置、数值误差、参数定义与实现缺口。">
+<link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=1ec0d72f3839"><link rel="stylesheet" href="nn-modules.css?v=b578f878ca66">
+<script defer src="module-data.js?v=93bf3869d813"></script><script defer src="nn-modules.js?v=5222ba66d1ad"></script></head>
+<body><header class="topbar"><a class="brand" href="index.html"><span class="brand-mark">▦</span><span>MIXTENSOR<span class="brand-sub">MODEL LANGUAGE LAB</span></span></a><nav aria-label="主导航"><a href="nn-modules.html" aria-current="page">nn.Module 平替</a><a href="index.html">定义源码</a><a href="primitives.html">原语图谱</a><a href="models.html">模型拆解</a></nav></header>
+<main><div class="page-heading"><div><p class="eyebrow">PYTORCH → PRIMITIVE IMPLEMENTATIONS</p><h1>每个模块，当前如何用原语表达。</h1><p class="subtitle">从公开类找到对应的原语实现，展开配置与验证记录，再进入源码检查。</p></div><a class="download" href="nn-module-replacements.json" download>↓ 完整平替清单</a></div>
+<div id="coverage-summary" class="summary"></div>
+<div class="catalog-notice"><strong>平替范围</strong>：已转写表示在列出的输入、配置与模式下通过数值对比，并不代表完整 PyTorch API 兼容。未实现项、结构类和训练状态限制均单独列出。</div>
+<div class="catalog-toolbar"><label class="search"><span aria-hidden="true">⌕</span><input id="module-query" type="search" aria-label="搜索模块或原语" placeholder="搜索 nn.Conv2d、LSTM、SCAN…"></label><label>状态 <select id="module-status"><option value="all">全部</option><option value="expanded">已验证转写</option><option value="unsupported">未实现</option><option value="structural">结构 / 抽象类</option><option value="stateless">训练无状态变体</option></select></label><label><input type="checkbox" id="include-variants"> 包含配置与组合变体</label><span id="visible-count" role="status"></span></div>
+<div class="catalog-table-wrap"><table class="replacement-table"><thead><tr><th scope="col">PyTorch 模块</th><th scope="col">当前状态</th><th scope="col">原语平替与验证范围</th><th scope="col">实现代码</th></tr></thead><tbody id="replacement-rows"></tbody></table><p id="catalog-empty" class="empty" hidden>没有匹配的模块，请更换关键词或筛选条件。</p></div>
+<p class="scope-note" id="catalog-provenance"></p>
+<div class="catalog-links"><a href="graph-ir/">Graph IR 图与矩阵 ↗</a><a href="random-models/">随机模型 ↗</a><a href="random-models/results.html">随机模型试跑 ↗</a><a href="meta-search/">元模型搜索报告 ↗</a><a href="adding-benchmark/">Adding benchmark ↗</a></div>
+<noscript>此目录需要启用 JavaScript。完整内容也可下载上方 JSON 清单查看。</noscript></main>
+<footer><span>MIXTENSOR / MODULE REPLACEMENT CATALOG</span><a href="nn-module-validation.json">展开源码验证记录 ↗</a></footer></body></html>

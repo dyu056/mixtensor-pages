@@ -1,6 +1,6 @@
 # 随机模型生成器 V0
 
-实现位置：`src/matrix_dsl/generation/`。生成器返回 Graph IR，不动态生成或执行 Python 字符串。第一版支持保形 DAG 与一层有界 REPEAT；SCAN、任意输入布局、分类任务输出头、GNN 引导采样尚未接入。
+实现位置：`src/matrix_dsl/generation/`。生成器返回 Graph IR，不动态生成或执行 Python 字符串。当前仅生成保形 DAG；REPEAT 和 SCAN 暂时排除在候选节点之外。DSL 仍保留循环执行支持。任意输入布局、分类任务输出头、GNN 引导采样尚未接入。
 
 ## 使用
 
@@ -39,7 +39,7 @@ result = ExperimentRunner(TrainingConfig(steps=80)).train(
 
 规则在剩余节点预算允许的集合中均匀采样；并不意味着原语或架构均匀分布。可以通过 `operations` 配置子集，且必须保留至少一个单节点规则以填满预算。固定输入/输出骨架和 attention 组合都会形成采样偏好，后续频次分析必须以提案分布为对照。
 
-深度从 `repeat_choices=(1,2,4,8)` 采样。1 表示直接 DAG；大于 1 时随机选择 shared 或 per_step。根图统一注册参数；循环体通过显式输入绑定引用，常量即使 per_step 也复用。
+`repeat_choices` 暂时仅允许 `(1,)`，表示直接 DAG；旧的多次循环配置会明确报错。`GraphFilter` 同时拒绝 REPEAT / SCAN 控制节点。模型规模由 `min_nodes` / `max_nodes` 控制。历史结果中的循环模型仍可读取和执行，但不再作为新生成候选。
 
 ## 约束与失败
 

@@ -1,0 +1,6442 @@
+{
+  "torch": "2.14.0",
+  "device": "cpu",
+  "dtype": "float64",
+  "seed": 20260920,
+  "counts": {
+    "equivalent": 131,
+    "partial_state": 13
+  },
+  "results": [
+    {
+      "name": "AdaptiveAvgPool1d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "BROADCAST": 2,
+        "MUL": 2,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 5.551115123125783e-17,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 85.40435499999148,
+      "file": "AdaptiveAvgPool1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "BROADCAST": 2,
+        "MUL": 2,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "AdaptiveAvgPool2d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "BROADCAST": 4,
+        "MUL": 4,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 5.551115123125783e-17,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.12197158401249908,
+      "file": "AdaptiveAvgPool2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "BROADCAST": 4,
+        "MUL": 4,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "AdaptiveAvgPool3d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "BROADCAST": 8,
+        "MUL": 8,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.6653345369377348e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 3.469446951953614e-17,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.9703082079940941,
+      "file": "AdaptiveAvgPool3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "BROADCAST": 8,
+        "MUL": 8,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "AdaptiveMaxPool1d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "Max values only; argmax indices and tie-gradient semantics are not covered.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 2.863605999998981,
+      "file": "AdaptiveMaxPool1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "AdaptiveMaxPool2d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "Max values only; argmax indices and tie-gradient semantics are not covered.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0013783750036964193,
+      "file": "AdaptiveMaxPool2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "AdaptiveMaxPool3d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "Max values only; argmax indices and tie-gradient semantics are not covered.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.002292542005307041,
+      "file": "AdaptiveMaxPool3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "AlphaDropout",
+      "category": "numerical",
+      "config": "eval() only, p=.3",
+      "limitation": "Eval identity does not express training-time RNG or random mask sampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.27265758300200105,
+      "file": "AlphaDropout.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "AvgPool1d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "BROADCAST": 2,
+        "MUL": 2,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.09281724999891594,
+      "file": "AvgPool1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "BROADCAST": 2,
+        "MUL": 2,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "AvgPool2d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "BROADCAST": 4,
+        "MUL": 4,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0015244169917423278,
+      "file": "AvgPool2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "BROADCAST": 4,
+        "MUL": 4,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "AvgPool3d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "BROADCAST": 8,
+        "MUL": 8,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 1.0454854160052491,
+      "file": "AvgPool3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "BROADCAST": 8,
+        "MUL": 8,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "BatchNorm1d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 4.440892098500626e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 3.2758352090022527,
+      "file": "BatchNorm1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "BatchNorm2d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0010698749974835664,
+      "file": "BatchNorm2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "BatchNorm3d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.000885208006366156,
+      "file": "BatchNorm3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "Bilinear",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 2,
+        "RESHAPE": 2,
+        "PROJECT": 2,
+        "MUL": 2,
+        "REDUCE": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 4
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 2.4252295829937793,
+      "file": "Bilinear.py",
+      "static_primitive_calls": {
+        "ROUTE": 2,
+        "RESHAPE": 2,
+        "PROJECT": 2,
+        "MUL": 2,
+        "REDUCE": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "ChannelShuffle",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            4,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "PERMUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 1.2094742080080323,
+      "file": "ChannelShuffle.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "PERMUTE": 1
+      }
+    },
+    {
+      "name": "CircularPad1d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 2.799809082993306,
+      "file": "CircularPad1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "CircularPad2d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.001169083989225328,
+      "file": "CircularPad2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "CircularPad3d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0011563750013010576,
+      "file": "CircularPad3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "ConstantPad1d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.6148959169950103,
+      "file": "ConstantPad1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "ConstantPad2d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.001093584010959603,
+      "file": "ConstantPad2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "ConstantPad3d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0010985410044668242,
+      "file": "ConstantPad3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "Conv1d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 12,
+        "PERMUTE": 12,
+        "RESHAPE": 12,
+        "PROJECT": 6,
+        "CONCAT": 3,
+        "BROADCAST": 3,
+        "ADD": 3
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 5.842494790995261,
+      "file": "Conv1d.py",
+      "static_primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 4,
+        "PERMUTE": 4,
+        "RESHAPE": 4,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "Conv2d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 36,
+        "PERMUTE": 36,
+        "RESHAPE": 36,
+        "PROJECT": 18,
+        "CONCAT": 9,
+        "BROADCAST": 9,
+        "ADD": 9
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.1102230246251565e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.13820483299787156,
+      "file": "Conv2d.py",
+      "static_primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 4,
+        "PERMUTE": 4,
+        "RESHAPE": 4,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "Conv3d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 108,
+        "PERMUTE": 108,
+        "RESHAPE": 108,
+        "PROJECT": 54,
+        "CONCAT": 27,
+        "BROADCAST": 27,
+        "ADD": 27
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 3.552713678800501e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.6103977500024484,
+      "file": "Conv3d.py",
+      "static_primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 4,
+        "PERMUTE": 4,
+        "RESHAPE": 4,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "ConvTranspose1d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            10
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 4.440892098500626e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.7321360419882694,
+      "file": "ConvTranspose1d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "ConvTranspose2d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            10,
+            10
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.2544008330005454,
+      "file": "ConvTranspose2d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "ConvTranspose3d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            10,
+            10,
+            10
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-14,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.008266666991403326,
+      "file": "ConvTranspose3d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "DataParallel",
+      "category": "numerical",
+      "config": "CPU single-device wrapper only",
+      "limitation": "No multi-device scatter/gather/communication tested.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 1,
+        "PROJECT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.80903550000221,
+      "file": "DataParallel.py",
+      "static_primitive_calls": {
+        "PERMUTE": 1,
+        "PROJECT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "Dropout",
+      "category": "numerical",
+      "config": "eval() only, p=.3",
+      "limitation": "Eval identity does not express training-time RNG or random mask sampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.07359512500988785,
+      "file": "Dropout.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "Dropout1d",
+      "category": "numerical",
+      "config": "eval() only, p=.3",
+      "limitation": "Eval identity does not express training-time RNG or random mask sampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.25688533300126437,
+      "file": "Dropout1d.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "Dropout2d",
+      "category": "numerical",
+      "config": "eval() only, p=.3",
+      "limitation": "Eval identity does not express training-time RNG or random mask sampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.00045649999810848385,
+      "file": "Dropout2d.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "Dropout3d",
+      "category": "numerical",
+      "config": "eval() only, p=.3",
+      "limitation": "Eval identity does not express training-time RNG or random mask sampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0003409580094739795,
+      "file": "Dropout3d.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "Embedding",
+      "category": "numerical",
+      "config": "dense gradients; 2D indices; no padding_idx/max_norm/frequency scaling/sparse gradients",
+      "limitation": "EmbeddingBag fixed equal-length bags only; parameter gradient checked, indices non-differentiable.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.6353547500038985,
+      "file": "Embedding.py",
+      "static_primitive_calls": {
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "EmbeddingBag",
+      "category": "numerical",
+      "config": "dense gradients; 2D indices; no padding_idx/max_norm/frequency scaling/sparse gradients",
+      "limitation": "EmbeddingBag fixed equal-length bags only; parameter gradient checked, indices non-differentiable.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 1,
+        "AGGREGATE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 5.551115123125783e-17,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 4.9256840419984655,
+      "file": "EmbeddingBag.py",
+      "static_primitive_calls": {
+        "ROUTE": 1,
+        "AGGREGATE": 1
+      }
+    },
+    {
+      "name": "FeatureAlphaDropout",
+      "category": "numerical",
+      "config": "eval() only, p=.3",
+      "limitation": "Eval identity does not express training-time RNG or random mask sampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.05377362499712035,
+      "file": "FeatureAlphaDropout.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "Flatten",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            12
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0004901670035906136,
+      "file": "Flatten.py",
+      "static_primitive_calls": {
+        "RESHAPE": 1
+      }
+    },
+    {
+      "name": "Fold",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "PERMUTE": 2,
+        "MIX": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 1.5620690000068862,
+      "file": "Fold.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "PERMUTE": 2,
+        "MIX": 1
+      }
+    },
+    {
+      "name": "GELU",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 1.441213540994795,
+      "file": "GELU.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "GLU",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 2,
+        "GATE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.1102230246251565e-16,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 1.644261125009507,
+      "file": "GLU.py",
+      "static_primitive_calls": {
+        "ROUTE": 2,
+        "GATE": 1
+      }
+    },
+    {
+      "name": "GRU",
+      "category": "numerical",
+      "config": "one layer, one direction, T=3, no dropout or packed sequence",
+      "limitation": "PackedSequence, projected LSTM, multi-layer/bidirectional combinations not included.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            3,
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        },
+        {
+          "shape": [
+            1,
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 19,
+        "RESHAPE": 2,
+        "SCAN": 1,
+        "PERMUTE": 6,
+        "PROJECT": 6,
+        "BROADCAST": 12,
+        "ADD": 21,
+        "NONLINEAR": 9,
+        "MUL": 12
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 5.551115123125783e-16,
+        "checked_tensors": 6
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 3.8487413749971893,
+      "file": "GRU.py",
+      "static_primitive_calls": {
+        "ROUTE": 7,
+        "RESHAPE": 2,
+        "SCAN": 1,
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 4,
+        "ADD": 7,
+        "NONLINEAR": 3,
+        "MUL": 4
+      }
+    },
+    {
+      "name": "GRUCell",
+      "category": "numerical",
+      "config": "single step; nonzero state; bias=True",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 4,
+        "ADD": 7,
+        "ROUTE": 6,
+        "NONLINEAR": 3,
+        "MUL": 4
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 5.551115123125783e-17,
+        "checked_tensors": 6
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.1785195830016164,
+      "file": "GRUCell.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 4,
+        "ADD": 7,
+        "ROUTE": 6,
+        "NONLINEAR": 3,
+        "MUL": 4
+      }
+    },
+    {
+      "name": "GroupNorm",
+      "category": "numerical",
+      "config": "2 groups; affine=True",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 1.7039614590030396,
+      "file": "GroupNorm.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "Hardsigmoid",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 8,
+        "MUL": 4,
+        "ADD": 5,
+        "NONLINEAR": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.389339667402851e-09,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.9596429579978576,
+      "file": "Hardsigmoid.py",
+      "static_primitive_calls": {
+        "BROADCAST": 8,
+        "MUL": 4,
+        "ADD": 5,
+        "NONLINEAR": 2
+      }
+    },
+    {
+      "name": "Hardswish",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 8,
+        "MUL": 5,
+        "ADD": 5,
+        "NONLINEAR": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 4.440892098500626e-16,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.3747965829970781,
+      "file": "Hardswish.py",
+      "static_primitive_calls": {
+        "BROADCAST": 8,
+        "MUL": 5,
+        "ADD": 5,
+        "NONLINEAR": 2
+      }
+    },
+    {
+      "name": "Hardtanh",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 6,
+        "MUL": 3,
+        "ADD": 4,
+        "NONLINEAR": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.03775662499538157,
+      "file": "Hardtanh.py",
+      "static_primitive_calls": {
+        "BROADCAST": 6,
+        "MUL": 3,
+        "ADD": 4,
+        "NONLINEAR": 2
+      }
+    },
+    {
+      "name": "HingeEmbeddingLoss",
+      "category": "numerical",
+      "config": "default reductions, valid labels; no class weights/ignore_index",
+      "limitation": "Index-selection lowering can create quadratic intermediates; no sparse-gradient or ignored-label contract.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 6,
+        "ADD": 4,
+        "MUL": 5,
+        "NONLINEAR": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.36220666699227877,
+      "file": "HingeEmbeddingLoss.py",
+      "static_primitive_calls": {
+        "BROADCAST": 6,
+        "ADD": 4,
+        "MUL": 5,
+        "NONLINEAR": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "HuberLoss",
+      "category": "numerical",
+      "config": "default mean reduction",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 6,
+        "MUL": 7,
+        "ADD": 4,
+        "NONLINEAR": 3,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.7755575615628914e-17,
+        "checked_tensors": 2
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.44055354200827423,
+      "file": "HuberLoss.py",
+      "static_primitive_calls": {
+        "BROADCAST": 6,
+        "MUL": 7,
+        "ADD": 4,
+        "NONLINEAR": 3,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "Identity",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007460409979103133,
+      "file": "Identity.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "InstanceNorm1d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 3.3306690738754696e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.20649520801089238,
+      "file": "InstanceNorm1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "InstanceNorm2d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0010712499934015796,
+      "file": "InstanceNorm2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "InstanceNorm3d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 3.552713678800501e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0010711670038290322,
+      "file": "InstanceNorm3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "L1Loss",
+      "category": "numerical",
+      "config": "default mean reduction",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 2,
+        "MUL": 2,
+        "ADD": 2,
+        "NONLINEAR": 2,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 2
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.1502172090113163,
+      "file": "L1Loss.py",
+      "static_primitive_calls": {
+        "BROADCAST": 2,
+        "MUL": 2,
+        "ADD": 2,
+        "NONLINEAR": 2,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "LPPool1d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "LPPool p=1 only; arbitrary p requires power/root support.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.5279688339942368,
+      "file": "LPPool1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "LPPool2d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "LPPool p=1 only; arbitrary p requires power/root support.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0013330420042620972,
+      "file": "LPPool2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "LPPool3d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "LPPool p=1 only; arbitrary p requires power/root support.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0018129170057363808,
+      "file": "LPPool3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "LSTM",
+      "category": "numerical",
+      "config": "one layer, one direction, T=3, no dropout or packed sequence",
+      "limitation": "PackedSequence, projected LSTM, multi-layer/bidirectional combinations not included.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            3,
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        },
+        {
+          "shape": [
+            1,
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        },
+        {
+          "shape": [
+            1,
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 14,
+        "RESHAPE": 4,
+        "SCAN": 1,
+        "PERMUTE": 6,
+        "PROJECT": 6,
+        "BROADCAST": 6,
+        "ADD": 12,
+        "NONLINEAR": 15,
+        "MUL": 9
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 7
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.14707250001083594,
+      "file": "LSTM.py",
+      "static_primitive_calls": {
+        "ROUTE": 6,
+        "RESHAPE": 4,
+        "SCAN": 1,
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 2,
+        "ADD": 4,
+        "NONLINEAR": 5,
+        "MUL": 3
+      }
+    },
+    {
+      "name": "LSTMCell",
+      "category": "numerical",
+      "config": "single step; nonzero state; bias=True",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        },
+        {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 2,
+        "ADD": 4,
+        "ROUTE": 4,
+        "NONLINEAR": 5,
+        "MUL": 3
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 7
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.006100541999330744,
+      "file": "LSTMCell.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 2,
+        "ADD": 4,
+        "ROUTE": 4,
+        "NONLINEAR": 5,
+        "MUL": 3
+      }
+    },
+    {
+      "name": "LayerNorm",
+      "category": "numerical",
+      "config": "two trailing normalized axes; eps=1e-5",
+      "limitation": "RMSNorm lowered using NORM([x,-x]) then selecting the first half; no new primitive.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NORM": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007622499979333952,
+      "file": "LayerNorm.py",
+      "static_primitive_calls": {
+        "NORM": 1
+      }
+    },
+    {
+      "name": "LazyBatchNorm1d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0009292089962400496,
+      "file": "LazyBatchNorm1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "LazyBatchNorm2d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007098330097505823,
+      "file": "LazyBatchNorm2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "LazyBatchNorm3d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 3.552713678800501e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007789580122334883,
+      "file": "LazyBatchNorm3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "LazyConv1d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 12,
+        "PERMUTE": 12,
+        "RESHAPE": 12,
+        "PROJECT": 6,
+        "CONCAT": 3,
+        "BROADCAST": 3,
+        "ADD": 3
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 4.440892098500626e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.003349666003487073,
+      "file": "LazyConv1d.py",
+      "static_primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 4,
+        "PERMUTE": 4,
+        "RESHAPE": 4,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyConv2d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 36,
+        "PERMUTE": 36,
+        "RESHAPE": 36,
+        "PROJECT": 18,
+        "CONCAT": 9,
+        "BROADCAST": 9,
+        "ADD": 9
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.6653345369377348e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.005149666991201229,
+      "file": "LazyConv2d.py",
+      "static_primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 4,
+        "PERMUTE": 4,
+        "RESHAPE": 4,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyConv3d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 108,
+        "PERMUTE": 108,
+        "RESHAPE": 108,
+        "PROJECT": 54,
+        "CONCAT": 27,
+        "BROADCAST": 27,
+        "ADD": 27
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.08765033300733194,
+      "file": "LazyConv3d.py",
+      "static_primitive_calls": {
+        "SCAN": 1,
+        "ROUTE": 4,
+        "PERMUTE": 4,
+        "RESHAPE": 4,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyConvTranspose1d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            10
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.010029666998889297,
+      "file": "LazyConvTranspose1d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyConvTranspose2d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            10,
+            10
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 7.105427357601002e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.022283208003500476,
+      "file": "LazyConvTranspose2d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyConvTranspose3d",
+      "category": "numerical",
+      "config": "groups=2, stride=2, padding=1, kernel=3; transposed output_padding=1; lazy materialized",
+      "limitation": "Only dense real kernels; padding_mode=zeros. No complex input, parametrization or lazy initialization semantics.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            4,
+            10,
+            10,
+            10
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.4868995751603507e-14,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.006645040994044393,
+      "file": "LazyConvTranspose3d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 4,
+        "RESHAPE": 6,
+        "ROUTE": 6,
+        "PROJECT": 2,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyInstanceNorm1d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007599999953527004,
+      "file": "LazyInstanceNorm1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "LazyInstanceNorm2d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007551250018877909,
+      "file": "LazyInstanceNorm2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "LazyInstanceNorm3d",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0010628329910105094,
+      "file": "LazyInstanceNorm3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "LazyLinear",
+      "category": "numerical",
+      "config": "bias=True; lazy tested after materialization",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            5,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 1,
+        "PROJECT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0006953749980311841,
+      "file": "LazyLinear.py",
+      "static_primitive_calls": {
+        "PERMUTE": 1,
+        "PROJECT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LeakyReLU",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 2,
+        "BROADCAST": 3,
+        "MUL": 3,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0006510419916594401,
+      "file": "LeakyReLU.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 2,
+        "BROADCAST": 3,
+        "MUL": 3,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "Linear",
+      "category": "numerical",
+      "config": "bias=True; lazy tested after materialization",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            5,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 1,
+        "PROJECT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0016071249992819503,
+      "file": "Linear.py",
+      "static_primitive_calls": {
+        "PERMUTE": 1,
+        "PROJECT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "MSELoss",
+      "category": "numerical",
+      "config": "default mean reduction",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 1,
+        "MUL": 2,
+        "ADD": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.7755575615628914e-17,
+        "checked_tensors": 2
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.022308667001198046,
+      "file": "MSELoss.py",
+      "static_primitive_calls": {
+        "BROADCAST": 1,
+        "MUL": 2,
+        "ADD": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "MarginRankingLoss",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 3,
+        "MUL": 3,
+        "ADD": 2,
+        "NONLINEAR": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 2
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0009643749945098534,
+      "file": "MarginRankingLoss.py",
+      "static_primitive_calls": {
+        "BROADCAST": 3,
+        "MUL": 3,
+        "ADD": 2,
+        "NONLINEAR": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "MaxPool1d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "Max values only; argmax indices and tie-gradient semantics are not covered.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.19307608300005086,
+      "file": "MaxPool1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 2,
+        "REDUCE": 2,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "MaxPool2d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "Max values only; argmax indices and tie-gradient semantics are not covered.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.03373895899858326,
+      "file": "MaxPool2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 4,
+        "REDUCE": 4,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "MaxPool3d",
+      "category": "numerical",
+      "config": "small dense input; no ceil_mode; output_size=2 or kernel=2/stride=2",
+      "limitation": "Max values only; argmax indices and tie-gradient semantics are not covered.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            2,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "CONCAT": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.3420440000045346,
+      "file": "MaxPool3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 8,
+        "REDUCE": 8,
+        "CONCAT": 1
+      }
+    },
+    {
+      "name": "MaxUnpool1d",
+      "category": "numerical",
+      "config": "non-overlapping pool-produced indices; one-hot incidence via ROUTE",
+      "limitation": "Only unique destination indices, no duplicate-write semantics; dense one-hot expansion is not an efficient implementation.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 3,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.2659351250040345,
+      "file": "MaxUnpool1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 3,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "MaxUnpool2d",
+      "category": "numerical",
+      "config": "non-overlapping pool-produced indices; one-hot incidence via ROUTE",
+      "limitation": "Only unique destination indices, no duplicate-write semantics; dense one-hot expansion is not an efficient implementation.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 3,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007319159922190011,
+      "file": "MaxUnpool2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 3,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "MaxUnpool3d",
+      "category": "numerical",
+      "config": "non-overlapping pool-produced indices; one-hot incidence via ROUTE",
+      "limitation": "Only unique destination indices, no duplicate-write semantics; dense one-hot expansion is not an efficient implementation.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4,
+            4,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 3,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.07826037499762606,
+      "file": "MaxUnpool3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 3,
+        "ROUTE": 1,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "MultiLabelMarginLoss",
+      "category": "numerical",
+      "config": "default reductions, valid labels; no class weights/ignore_index",
+      "limitation": "Index-selection lowering can create quadratic intermediates; no sparse-gradient or ignored-label contract.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 1,
+        "AGGREGATE": 1,
+        "RESHAPE": 4,
+        "BROADCAST": 9,
+        "MUL": 5,
+        "ADD": 3,
+        "NONLINEAR": 1,
+        "REDUCE": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.18792416699579917,
+      "file": "MultiLabelMarginLoss.py",
+      "static_primitive_calls": {
+        "ROUTE": 1,
+        "AGGREGATE": 1,
+        "RESHAPE": 4,
+        "BROADCAST": 9,
+        "MUL": 5,
+        "ADD": 3,
+        "NONLINEAR": 1,
+        "REDUCE": 2
+      }
+    },
+    {
+      "name": "MultiMarginLoss",
+      "category": "numerical",
+      "config": "default reductions, valid labels; no class weights/ignore_index",
+      "limitation": "Index-selection lowering can create quadratic intermediates; no sparse-gradient or ignored-label contract.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 1,
+        "ROUTE": 2,
+        "RESHAPE": 2,
+        "BROADCAST": 6,
+        "MUL": 3,
+        "ADD": 3,
+        "NONLINEAR": 1,
+        "REDUCE": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.1102230246251565e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.734723475976807e-18,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0012262500094948336,
+      "file": "MultiMarginLoss.py",
+      "static_primitive_calls": {
+        "PERMUTE": 1,
+        "ROUTE": 2,
+        "RESHAPE": 2,
+        "BROADCAST": 6,
+        "MUL": 3,
+        "ADD": 3,
+        "NONLINEAR": 1,
+        "REDUCE": 2
+      }
+    },
+    {
+      "name": "MultiheadAttention",
+      "category": "numerical",
+      "config": "2 heads, self-attention, batch_first, dropout=0",
+      "limitation": "No masks, separate kdim/vdim, bias_kv, zero-attention or training dropout in this fixture.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        },
+        {
+          "shape": [
+            2,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 6,
+        "PERMUTE": 8,
+        "PROJECT": 4,
+        "BROADCAST": 5,
+        "ADD": 4,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 5
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.6057020830048714,
+      "file": "MultiheadAttention.py",
+      "static_primitive_calls": {
+        "ROUTE": 6,
+        "PERMUTE": 8,
+        "PROJECT": 4,
+        "BROADCAST": 5,
+        "ADD": 4,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "NLLLoss",
+      "category": "numerical",
+      "config": "default reductions, valid labels; no class weights/ignore_index",
+      "limitation": "Index-selection lowering can create quadratic intermediates; no sparse-gradient or ignored-label contract.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "ROUTE": 2,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.10456424999574665,
+      "file": "NLLLoss.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "ROUTE": 2,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "NLLLoss2d",
+      "category": "numerical",
+      "config": "default reductions, valid labels; no class weights/ignore_index",
+      "limitation": "Index-selection lowering can create quadratic intermediates; no sparse-gradient or ignored-label contract.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "ROUTE": 2,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.85722573273506e-17,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.1871245830116095,
+      "file": "NLLLoss2d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "ROUTE": 2,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "PReLU",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 2,
+        "BROADCAST": 3,
+        "MUL": 3,
+        "RESHAPE": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 2
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.11474720800470095,
+      "file": "PReLU.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 2,
+        "BROADCAST": 3,
+        "MUL": 3,
+        "RESHAPE": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "PixelShuffle",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2,
+            8,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "PERMUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.16518708399962634,
+      "file": "PixelShuffle.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "PERMUTE": 1
+      }
+    },
+    {
+      "name": "PixelUnshuffle",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            16,
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "PERMUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0011590000067371875,
+      "file": "PixelUnshuffle.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "PERMUTE": 1
+      }
+    },
+    {
+      "name": "RMSNorm",
+      "category": "numerical",
+      "config": "two trailing normalized axes; eps=1e-5",
+      "limitation": "RMSNorm lowered using NORM([x,-x]) then selecting the first half; no new primitive.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "BROADCAST": 2,
+        "MUL": 2,
+        "CONCAT": 1,
+        "NORM": 1,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 5.551115123125783e-17,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-16,
+        "checked_tensors": 2
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.3014059170091059,
+      "file": "RMSNorm.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "BROADCAST": 2,
+        "MUL": 2,
+        "CONCAT": 1,
+        "NORM": 1,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "RNN",
+      "category": "numerical",
+      "config": "one layer, one direction, T=3, no dropout or packed sequence",
+      "limitation": "PackedSequence, projected LSTM, multi-layer/bidirectional combinations not included.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            3,
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        },
+        {
+          "shape": [
+            1,
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 1,
+        "RESHAPE": 2,
+        "SCAN": 1,
+        "PERMUTE": 6,
+        "PROJECT": 6,
+        "BROADCAST": 6,
+        "ADD": 9,
+        "NONLINEAR": 3
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 6
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.042550625003059395,
+      "file": "RNN.py",
+      "static_primitive_calls": {
+        "ROUTE": 1,
+        "RESHAPE": 2,
+        "SCAN": 1,
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 2,
+        "ADD": 3,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "RNNCell",
+      "category": "numerical",
+      "config": "single step; nonzero state; bias=True",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 2,
+        "ADD": 3,
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 6
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.02333595800155308,
+      "file": "RNNCell.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 2,
+        "ADD": 3,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "RReLU",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "RReLU random training slopes not covered.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 2,
+        "BROADCAST": 3,
+        "MUL": 3,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.2880693749903003,
+      "file": "RReLU.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 2,
+        "BROADCAST": 3,
+        "MUL": 3,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "ReLU",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.000605708992225118,
+      "file": "ReLU.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "ReLU6",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 6,
+        "MUL": 3,
+        "ADD": 4,
+        "NONLINEAR": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0013208330055931583,
+      "file": "ReLU6.py",
+      "static_primitive_calls": {
+        "BROADCAST": 6,
+        "MUL": 3,
+        "ADD": 4,
+        "NONLINEAR": 2
+      }
+    },
+    {
+      "name": "ReflectionPad1d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.19432795800094027,
+      "file": "ReflectionPad1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "ReflectionPad2d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0010003329953178763,
+      "file": "ReflectionPad2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "ReflectionPad3d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.000704166988725774,
+      "file": "ReflectionPad3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "ReplicationPad1d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0005650840030284598,
+      "file": "ReplicationPad1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "ReplicationPad2d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0006809169863117859,
+      "file": "ReplicationPad2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "ReplicationPad3d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0005430829914985225,
+      "file": "ReplicationPad3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "Sequential",
+      "category": "numerical",
+      "config": "Linear -> ReLU -> Linear",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            2
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 2,
+        "ADD": 2,
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 5
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.000952292000874877,
+      "file": "Sequential.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "PROJECT": 2,
+        "BROADCAST": 2,
+        "ADD": 2,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "SiLU",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.2056951250124257,
+      "file": "SiLU.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "Sigmoid",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0010356669954489917,
+      "file": "Sigmoid.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "SmoothL1Loss",
+      "category": "numerical",
+      "config": "default mean reduction",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 7,
+        "MUL": 8,
+        "ADD": 4,
+        "NONLINEAR": 3,
+        "REDUCE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 5.551115123125783e-17,
+        "checked_tensors": 2
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.19792787500773557,
+      "file": "SmoothL1Loss.py",
+      "static_primitive_calls": {
+        "BROADCAST": 7,
+        "MUL": 8,
+        "ADD": 4,
+        "NONLINEAR": 3,
+        "REDUCE": 1
+      }
+    },
+    {
+      "name": "Softmax",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NORMALIZE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0009276670025428757,
+      "file": "Softmax.py",
+      "static_primitive_calls": {
+        "NORMALIZE": 1
+      }
+    },
+    {
+      "name": "Softmax2d",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NORMALIZE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.06812770800024737,
+      "file": "Softmax2d.py",
+      "static_primitive_calls": {
+        "NORMALIZE": 1
+      }
+    },
+    {
+      "name": "Softmin",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 1,
+        "MUL": 1,
+        "NORMALIZE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0898543749935925,
+      "file": "Softmin.py",
+      "static_primitive_calls": {
+        "BROADCAST": 1,
+        "MUL": 1,
+        "NORMALIZE": 1
+      }
+    },
+    {
+      "name": "Softshrink",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "BROADCAST": 6,
+        "MUL": 4,
+        "ADD": 3,
+        "NONLINEAR": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.08785508299479261,
+      "file": "Softshrink.py",
+      "static_primitive_calls": {
+        "BROADCAST": 6,
+        "MUL": 4,
+        "ADD": 3,
+        "NONLINEAR": 2
+      }
+    },
+    {
+      "name": "SyncBatchNorm",
+      "category": "numerical",
+      "config": "eval(); fixed running buffers; affine=True; lazy materialized",
+      "limitation": "Only inference, no running-stat updates or distributed all-reduce. Train-mode outputs are tested separately.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.3322676295501878e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007404170028166845,
+      "file": "SyncBatchNorm.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "BROADCAST": 5,
+        "MUL": 3,
+        "ADD": 2
+      }
+    },
+    {
+      "name": "Tanh",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.00034820799191948026,
+      "file": "Tanh.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "Tanhshrink",
+      "category": "numerical",
+      "config": "default parameters; RReLU eval; GLU last dim",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NONLINEAR": 1,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.000497667002491653,
+      "file": "Tanhshrink.py",
+      "static_primitive_calls": {
+        "NONLINEAR": 1,
+        "BROADCAST": 1,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "Transformer",
+      "category": "numerical",
+      "config": "small full forward; 1 layer; relu; no masks/dropout",
+      "limitation": "Not all Transformer configurations, ragged/nested inputs or generation behavior.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "REPEAT": 2,
+        "ROUTE": 18,
+        "PERMUTE": 28,
+        "PROJECT": 16,
+        "BROADCAST": 19,
+        "ADD": 21,
+        "RESHAPE": 12,
+        "COMPARE": 3,
+        "MUL": 3,
+        "NORMALIZE": 3,
+        "MIX": 3,
+        "REDUCE": 3,
+        "NORM": 7,
+        "NONLINEAR": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 6.661338147750939e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 3.552713678800501e-15,
+        "checked_tensors": 36
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 1.8352765839954372,
+      "file": "Transformer.py",
+      "static_primitive_calls": {
+        "REPEAT": 2,
+        "NORM": 7,
+        "ROUTE": 18,
+        "PERMUTE": 28,
+        "PROJECT": 16,
+        "BROADCAST": 19,
+        "ADD": 21,
+        "RESHAPE": 12,
+        "COMPARE": 3,
+        "MUL": 3,
+        "NORMALIZE": 3,
+        "MIX": 3,
+        "REDUCE": 3,
+        "NONLINEAR": 2
+      }
+    },
+    {
+      "name": "TransformerDecoder",
+      "category": "numerical",
+      "config": "small full forward; 1 layer; relu; no masks/dropout",
+      "limitation": "Not all Transformer configurations, ragged/nested inputs or generation behavior.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 12,
+        "PERMUTE": 18,
+        "PROJECT": 10,
+        "BROADCAST": 12,
+        "ADD": 13,
+        "RESHAPE": 8,
+        "COMPARE": 2,
+        "MUL": 2,
+        "NORMALIZE": 2,
+        "MIX": 2,
+        "REDUCE": 2,
+        "NORM": 3,
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-15,
+        "checked_tensors": 20
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.004769291001139209,
+      "file": "TransformerDecoder.py",
+      "static_primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 12,
+        "PERMUTE": 18,
+        "PROJECT": 10,
+        "BROADCAST": 12,
+        "ADD": 13,
+        "RESHAPE": 8,
+        "COMPARE": 2,
+        "MUL": 2,
+        "NORMALIZE": 2,
+        "MIX": 2,
+        "REDUCE": 2,
+        "NORM": 3,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "TransformerDecoderLayer",
+      "category": "numerical",
+      "config": "small full forward; 1 layer; relu; no masks/dropout",
+      "limitation": "Not all Transformer configurations, ragged/nested inputs or generation behavior.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 12,
+        "PERMUTE": 18,
+        "PROJECT": 10,
+        "BROADCAST": 12,
+        "ADD": 13,
+        "RESHAPE": 8,
+        "COMPARE": 2,
+        "MUL": 2,
+        "NORMALIZE": 2,
+        "MIX": 2,
+        "REDUCE": 2,
+        "NORM": 3,
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 20
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.004137874988373369,
+      "file": "TransformerDecoderLayer.py",
+      "static_primitive_calls": {
+        "ROUTE": 12,
+        "PERMUTE": 18,
+        "PROJECT": 10,
+        "BROADCAST": 12,
+        "ADD": 13,
+        "RESHAPE": 8,
+        "COMPARE": 2,
+        "MUL": 2,
+        "NORMALIZE": 2,
+        "MIX": 2,
+        "REDUCE": 2,
+        "NORM": 3,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "TransformerEncoder",
+      "category": "numerical",
+      "config": "small full forward; 1 layer; relu; no masks/dropout",
+      "limitation": "Not all Transformer configurations, ragged/nested inputs or generation behavior.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 6,
+        "PERMUTE": 10,
+        "PROJECT": 6,
+        "BROADCAST": 7,
+        "ADD": 8,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1,
+        "NORM": 2,
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.3322676295501878e-15,
+        "checked_tensors": 13
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0037614579923683777,
+      "file": "TransformerEncoder.py",
+      "static_primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 6,
+        "PERMUTE": 10,
+        "PROJECT": 6,
+        "BROADCAST": 7,
+        "ADD": 8,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1,
+        "NORM": 2,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "TransformerEncoderLayer",
+      "category": "numerical",
+      "config": "small full forward; 1 layer; relu; no masks/dropout",
+      "limitation": "Not all Transformer configurations, ragged/nested inputs or generation behavior.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "ROUTE": 6,
+        "PERMUTE": 10,
+        "PROJECT": 6,
+        "BROADCAST": 7,
+        "ADD": 8,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1,
+        "NORM": 2,
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.3322676295501878e-15,
+        "checked_tensors": 13
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.002711584005737677,
+      "file": "TransformerEncoderLayer.py",
+      "static_primitive_calls": {
+        "ROUTE": 6,
+        "PERMUTE": 10,
+        "PROJECT": 6,
+        "BROADCAST": 7,
+        "ADD": 8,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1,
+        "NORM": 2,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "Unflatten",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.00039204099448397756,
+      "file": "Unflatten.py",
+      "static_primitive_calls": {
+        "RESHAPE": 1
+      }
+    },
+    {
+      "name": "Unfold",
+      "category": "numerical",
+      "config": "",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            18,
+            9
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0006168340041767806,
+      "file": "Unfold.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "Upsample",
+      "category": "numerical",
+      "config": "fixed output size, nearest or bilinear; no antialias",
+      "limitation": "Static interpolation stencil, not grid_sample or data-dependent resampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            6,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 6,
+        "PROJECT": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 1.3322676295501878e-15,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 2.220446049250313e-15,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 1.035114959013299,
+      "file": "Upsample.py",
+      "static_primitive_calls": {
+        "PERMUTE": 6,
+        "PROJECT": 2
+      }
+    },
+    {
+      "name": "UpsamplingBilinear2d",
+      "category": "numerical",
+      "config": "fixed output size, nearest or bilinear; no antialias",
+      "limitation": "Static interpolation stencil, not grid_sample or data-dependent resampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            6,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 6,
+        "PROJECT": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.996003610813204e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.001220999998622574,
+      "file": "UpsamplingBilinear2d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 6,
+        "PROJECT": 2
+      }
+    },
+    {
+      "name": "UpsamplingNearest2d",
+      "category": "numerical",
+      "config": "fixed output size, nearest or bilinear; no antialias",
+      "limitation": "Static interpolation stencil, not grid_sample or data-dependent resampling.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            6,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "PERMUTE": 6,
+        "PROJECT": 2
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 4.440892098500626e-16,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.16465437499573454,
+      "file": "UpsamplingNearest2d.py",
+      "static_primitive_calls": {
+        "PERMUTE": 6,
+        "PROJECT": 2
+      }
+    },
+    {
+      "name": "ZeroPad1d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0010595409985398874,
+      "file": "ZeroPad1d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "ZeroPad2d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0006457499985117465,
+      "file": "ZeroPad2d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "ZeroPad3d",
+      "category": "numerical",
+      "config": "asymmetric positive padding (1,2) per axis",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            7,
+            7,
+            7
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 0.0,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.000590000010561198,
+      "file": "ZeroPad3d.py",
+      "static_primitive_calls": {
+        "RESHAPE": 2,
+        "ROUTE": 1
+      }
+    },
+    {
+      "name": "BatchNorm1d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var",
+        "num_batches_tracked"
+      ],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 6.661338147750939e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.21611874998779967,
+      "file": "variants/BatchNorm1d__train.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "BatchNorm2d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var",
+        "num_batches_tracked"
+      ],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0008231249958043918,
+      "file": "variants/BatchNorm2d__train.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "BatchNorm3d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var",
+        "num_batches_tracked"
+      ],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0009328750020358711,
+      "file": "variants/BatchNorm3d__train.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "InstanceNorm1d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var"
+      ],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0007393749983748421,
+      "file": "variants/InstanceNorm1d__train.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "InstanceNorm2d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var"
+      ],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.3322676295501878e-15,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0007916670001577586,
+      "file": "variants/InstanceNorm2d__train.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "InstanceNorm3d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var"
+      ],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0006392500072252005,
+      "file": "variants/InstanceNorm3d__train.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyBatchNorm1d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var",
+        "num_batches_tracked"
+      ],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0006222500087460503,
+      "file": "variants/LazyBatchNorm1d__train.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyBatchNorm2d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var",
+        "num_batches_tracked"
+      ],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0005513329961104318,
+      "file": "variants/LazyBatchNorm2d__train.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyBatchNorm3d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var",
+        "num_batches_tracked"
+      ],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0006348329916363582,
+      "file": "variants/LazyBatchNorm3d__train.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyInstanceNorm1d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var"
+      ],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.4432899320127035e-15,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0018282079981872812,
+      "file": "variants/LazyInstanceNorm1d__train.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyInstanceNorm2d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var"
+      ],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.001000250005745329,
+      "file": "variants/LazyInstanceNorm2d__train.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "LazyInstanceNorm3d:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var"
+      ],
+      "primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0008450830064248294,
+      "file": "variants/LazyInstanceNorm3d__train.py",
+      "static_primitive_calls": {
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "SyncBatchNorm:train",
+      "category": "numerical",
+      "config": "training=True; output and gradient comparison only; persistent buffer updates assessed separately",
+      "limitation": "Forward tensor may lower via NORM after axis reshaping, but running_mean/running_var/num_batches_tracked updates are not represented.",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            4,
+            3,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [
+        "running_mean",
+        "running_var",
+        "num_batches_tracked"
+      ],
+      "primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 8.881784197001252e-16,
+        "checked_tensors": 3
+      },
+      "status": "partial_state",
+      "elapsed_seconds": 0.0008120420097839087,
+      "file": "variants/SyncBatchNorm__train.py",
+      "static_primitive_calls": {
+        "PERMUTE": 2,
+        "RESHAPE": 4,
+        "NORM": 1,
+        "BROADCAST": 2,
+        "MUL": 1,
+        "ADD": 1
+      }
+    },
+    {
+      "name": "GELU:tanh",
+      "category": "numerical",
+      "config": "tanh approximation",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "MUL": 6,
+        "BROADCAST": 4,
+        "ADD": 2,
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 0.0,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 4.440892098500626e-16,
+        "checked_tensors": 1
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0007219580002129078,
+      "file": "variants/GELU__tanh.py",
+      "static_primitive_calls": {
+        "MUL": 6,
+        "BROADCAST": 4,
+        "ADD": 2,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "TransformerEncoderLayer:pre_norm",
+      "category": "numerical",
+      "config": "pre-norm; no masks/dropout",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "NORM": 2,
+        "ROUTE": 6,
+        "PERMUTE": 10,
+        "PROJECT": 6,
+        "BROADCAST": 7,
+        "ADD": 8,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1,
+        "NONLINEAR": 1
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 2.220446049250313e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.1102230246251565e-15,
+        "checked_tensors": 13
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0029068750009173527,
+      "file": "variants/TransformerEncoderLayer__pre_norm.py",
+      "static_primitive_calls": {
+        "NORM": 2,
+        "ROUTE": 6,
+        "PERMUTE": 10,
+        "PROJECT": 6,
+        "BROADCAST": 7,
+        "ADD": 8,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "TransformerEncoder:repeat3",
+      "category": "numerical",
+      "config": "3 distinct parameter sets, LOOP.REPEAT PerStep, max_steps=3",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 18,
+        "PERMUTE": 30,
+        "PROJECT": 18,
+        "BROADCAST": 21,
+        "ADD": 24,
+        "RESHAPE": 12,
+        "COMPARE": 3,
+        "MUL": 3,
+        "NORMALIZE": 3,
+        "MIX": 3,
+        "REDUCE": 3,
+        "NORM": 6,
+        "NONLINEAR": 3
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 4.440892098500626e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.1102230246251565e-15,
+        "checked_tensors": 37
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.0067374579957686365,
+      "file": "variants/TransformerEncoder__repeat3.py",
+      "static_primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 6,
+        "PERMUTE": 10,
+        "PROJECT": 6,
+        "BROADCAST": 7,
+        "ADD": 8,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1,
+        "NORM": 2,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "TransformerDecoder:repeat3",
+      "category": "numerical",
+      "config": "3 distinct parameter sets, LOOP.REPEAT PerStep, max_steps=3",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 36,
+        "PERMUTE": 54,
+        "PROJECT": 30,
+        "BROADCAST": 36,
+        "ADD": 39,
+        "RESHAPE": 24,
+        "COMPARE": 6,
+        "MUL": 6,
+        "NORMALIZE": 6,
+        "MIX": 6,
+        "REDUCE": 6,
+        "NORM": 9,
+        "NONLINEAR": 3
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 6.661338147750939e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 3.552713678800501e-15,
+        "checked_tensors": 56
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.010887666998314671,
+      "file": "variants/TransformerDecoder__repeat3.py",
+      "static_primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 12,
+        "PERMUTE": 18,
+        "PROJECT": 10,
+        "BROADCAST": 12,
+        "ADD": 13,
+        "RESHAPE": 8,
+        "COMPARE": 2,
+        "MUL": 2,
+        "NORMALIZE": 2,
+        "MIX": 2,
+        "REDUCE": 2,
+        "NORM": 3,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "LoopedTransformer:shared3",
+      "category": "composition",
+      "config": "same block/parameters repeated 3 times; max_steps=6",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            2,
+            3,
+            8
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 18,
+        "PERMUTE": 30,
+        "PROJECT": 18,
+        "BROADCAST": 21,
+        "ADD": 24,
+        "RESHAPE": 12,
+        "COMPARE": 3,
+        "MUL": 3,
+        "NORMALIZE": 3,
+        "MIX": 3,
+        "REDUCE": 3,
+        "NORM": 6,
+        "NONLINEAR": 3
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 8.881784197001252e-16,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 4.440892098500626e-15,
+        "checked_tensors": 13
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.005824541993206367,
+      "file": "variants/LoopedTransformer__shared3.py",
+      "static_primitive_calls": {
+        "REPEAT": 1,
+        "ROUTE": 6,
+        "PERMUTE": 10,
+        "PROJECT": 6,
+        "BROADCAST": 7,
+        "ADD": 8,
+        "RESHAPE": 4,
+        "COMPARE": 1,
+        "MUL": 1,
+        "NORMALIZE": 1,
+        "MIX": 1,
+        "REDUCE": 1,
+        "NORM": 2,
+        "NONLINEAR": 1
+      }
+    },
+    {
+      "name": "LoopedCNN:shared3",
+      "category": "composition",
+      "config": "same block/parameters repeated 3 times; max_steps=6",
+      "limitation": "",
+      "reference": "passed",
+      "outputs": [
+        {
+          "shape": [
+            1,
+            2,
+            4,
+            4
+          ],
+          "dtype": "torch.float64",
+          "device": "cpu"
+        }
+      ],
+      "warnings": [],
+      "mutated_reference_buffers": [],
+      "primitive_calls": {
+        "REPEAT": 1,
+        "SCAN": 3,
+        "ROUTE": 96,
+        "PERMUTE": 96,
+        "RESHAPE": 96,
+        "PROJECT": 48,
+        "CONCAT": 48,
+        "BROADCAST": 48,
+        "ADD": 48
+      },
+      "outside_dsl_ops": {},
+      "max_abs_error": 5.551115123125783e-17,
+      "backward": {
+        "status": "passed",
+        "max_abs_error": 1.7763568394002505e-15,
+        "checked_tensors": 3
+      },
+      "status": "equivalent",
+      "elapsed_seconds": 0.017401040997356176,
+      "file": "variants/LoopedCNN__shared3.py",
+      "static_primitive_calls": {
+        "REPEAT": 1,
+        "SCAN": 1,
+        "ROUTE": 2,
+        "PERMUTE": 2,
+        "RESHAPE": 2,
+        "PROJECT": 1,
+        "CONCAT": 1,
+        "BROADCAST": 1,
+        "ADD": 1
+      }
+    }
+  ]
+}

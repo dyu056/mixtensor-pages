@@ -2,6 +2,7 @@
 
 Public static website for mixtensor. This repository contains the `docs/` website snapshot only.
 
+- [nn.Module primitive replacements](https://dyu056.github.io/mixtensor-pages/nn-modules.html)
 - [Module Definition](https://dyu056.github.io/mixtensor-pages/)
 - [DSL primitives](https://dyu056.github.io/mixtensor-pages/primitives.html)
 - [Model decompositions](https://dyu056.github.io/mixtensor-pages/models.html)

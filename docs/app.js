@@ -5,7 +5,8 @@ const escapeHTML=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>'
 const statusNames={expanded:'已验证转写',stateless:'仅训练无状态',unsupported:'尚未实现',structural:'结构 / 抽象类'};
 const statusDots={expanded:'verified',stateless:'partial',unsupported:'missing',structural:''};
 const opColor=op=>['REPEAT','SCAN'].includes(op)?'#7854b5':['PROJECT','MIX','COMPARE'].includes(op)?'#5366db':['REDUCE','NORM','NORMALIZE','AGGREGATE'].includes(op)?'#b26a14':['ROUTE','RESHAPE','PERMUTE','BROADCAST','SHIFT','CONCAT'].includes(op)?'#168173':'#b34d75';
-let selected,view='forward',query='',filter='all',visible=[],activeCode='',noticeTimer;
+const requestedView=new URLSearchParams(location.search).get('view');
+let selected,view=['forward','definition','source'].includes(requestedView)?requestedView:'forward',query='',filter='all',visible=[],activeCode='',noticeTimer;
 const token=/('''[\s\S]*?'''|"""[\s\S]*?"""|#[^\n]*|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'|\b(?:class|def|return|from|import|as|if|else|elif|for|in|None|True|False|raise|super|self)\b|\b(?:d\.LOOP\.(?:SCAN|REPEAT)|d\.[a-z_]+)\b|\b\d+(?:\.\d+)?\b)/g;
 function highlight(source){let result='',end=0;for(const match of source.matchAll(token)){result+=escapeHTML(source.slice(end,match.index));const text=match[0];const kind=text.startsWith('#')?'comment':/^['"]/.test(text)?'string':/^d\./.test(text)?'primitive':/^\d/.test(text)?'number':'key';result+=text.split('\n').map(line=>`<span class="tok-${kind}">${escapeHTML(line)}</span>`).join('\n');end=match.index+text.length;}return result+escapeHTML(source.slice(end));}
 function notify(message){$('#notification').textContent=message;clearTimeout(noticeTimer);noticeTimer=setTimeout(()=>$('#notification').textContent='',2400);}
